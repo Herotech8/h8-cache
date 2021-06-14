@@ -1,11 +1,19 @@
 {
-  "name": "h8-cache",
+  "name": "@herotech8/h8-cache",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herotech8/h8-cache.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herotech8/h8-cache/issues"
+  },
+  "homepage": "https://github.com/herotech8/h8-cache#readme"
 }
