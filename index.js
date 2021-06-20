@@ -104,6 +104,12 @@ class Cache {
 
     fs.writeFileSync(this.path + '/' + filename, JSON.stringify(content));
   }
+  
+  forget(key) {
+    var filename = key.replace(/\W/g, '') + '.json';
+
+    fs.unlinkSync(this.path + '/' + filename);
+  }
 }
 
 module.exports = new Cache;
