@@ -106,9 +106,15 @@ class Cache {
   }
   
   forget(key) {
-    var filename = key.replace(/\W/g, '') + '.json';
-
-    fs.unlinkSync(this.path + '/' + filename);
+     return new Promise((resolve, reject) => {
+        var filename = key.replace(/\W/g, '') + '.json';
+    
+       if(fs.existsSync(this.path + '/' + filename)) {
+         fs.unlinkSync(this.path + '/' + filename);
+       }
+       
+       resolve();
+     });
   }
 }
 
